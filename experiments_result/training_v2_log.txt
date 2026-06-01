@@ -1,0 +1,34 @@
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.15 and num_layers=1
+  warnings.warn(
+
+=================================================================
+  KePIN Training: CMAPSS_FD001
+=================================================================
+  Data: train=(17731, 30, 15), test=(100, 30, 15)
+  Target range: [0.00, 125.00]
+  Model: KePIN(medium) | params=1,398,089 | latent=128 | blocks=4 | heads=4
+  E   1/250 | lr=0.000200 | train=0.3340 val=-0.0075 rmse=22.57 | w=[1.00,1.03,1.03,1.04] | |λ|=[0.49586743 0.49586743 0.495783  ]
+  E  17/250 | lr=0.000957 | train=-3.1388 val=-3.2251 rmse=27.39 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.48059416 0.48059416 0.48054117]
+  E  33/250 | lr=0.000761 | train=-5.9965 val=-5.9861 rmse=25.45 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.47388574 0.47388574 0.4734876 ]
+  E  49/250 | lr=0.000472 | train=-5.9999 val=-5.9861 rmse=25.51 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.45881158 0.45881158 0.45826548]
+  Early stopping at epoch 52
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.15 and num_layers=1
+  warnings.warn(
+
+  Final Results for CMAPSS_FD001:
+    RMSE:  17.6434
+    MAE:   13.4355
+    R²:    0.8062
+    Time:  281.3s (52 epochs)
+    Top |λ|: [0.49493524 0.49493524 0.49407458 0.49407458 0.49405003]
+    Loss weights: pred=1.000 koop=1.108 spec=1.104 multi=1.117
+
+=================================================================
+  KePIN Training: CMAPSS_FD002
+=================================================================
+  Data: train=(46219, 30, 24), test=(253, 30, 24)
+  Target range: [0.00, 125.00]
+  Model: KePIN(large) | params=1,739,545 | latent=128 | blocks=4 | heads=8
+  E   1/200 | lr=0.000160 | train=0.2389 val=-0.0161 rmse=23.30 | w=[1.00,1.04,1.04,1.04] | |λ|=[0.49453822 0.49453822 0.49422276]
+  E  14/200 | lr=0.000771 | train=-2.5655 val=-2.6609 rmse=23.19 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.47925633 0.47925633 0.47910312]
+  E  27/200 | lr=0.000616 | train=-5.0797 val=-5.1532 rmse=22.28 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.47246116 0.47246116 0.47095975]

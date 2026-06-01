@@ -1,0 +1,101 @@
+[
+  {
+    "ablation": "A: Baseline FCN",
+    "ablation_tag": "A_baseline_fcn",
+    "dataset": "CMAPSS_FD001",
+    "run_id": 0,
+    "error": "in user code:\n\n    File \"/workspace/rahul/KPDD/code/kepin_training.py\", line 188, in train_step  *\n        rul_pred, koopman_out = self.model(X_batch, training=True)\n    File \"/workspace/rahul/miniconda3/envs/kepin/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py\", line 122, in error_handler  **\n        raise e.with_traceback(filtered_tb) from None\n    File \"/workspace/rahul/KPDD/code/kepin_ablation.py\", line 291, in call\n        x = self._se_block(x)\n    File \"/workspace/rahul/KPDD/code/kepin_ablation.py\", line 280, in _se_block\n        se = keras.layers.Dense(max(filters // ratio, 4), activation='relu')(se)\n\n    ValueError: Exception encountered when calling BaselineFCN.call().\n    \n    \u001b[1mtf.function only supports singleton tf.Variables created on the first call. Make sure the tf.Variable is only created once or created outside tf.function. See https://www.tensorflow.org/guide/function#creating_tfvariables for more information.\u001b[0m\n    \n    Arguments received by BaselineFCN.call():\n      \u2022 inputs=tf.Tensor(shape=(128, 30, 15), dtype=float32)\n      \u2022 training=True\n"
+  },
+  {
+    "ablation": "B: w/o Spectral",
+    "ablation_tag": "B_no_spectral",
+    "dataset": "CMAPSS_FD001",
+    "run_id": 0,
+    "RMSE": 15.729640007019043,
+    "MAE": 11.213932991027832,
+    "R2": 0.8459265247139129,
+    "MonoViol": 0.5539535521229929,
+    "SlopeRMSE": 22.35304730562028,
+    "NASAScore": 495.0895160441115,
+    "epochs_trained": 121,
+    "best_val_loss": 8.542182922363281,
+    "top_eig_mags": [
+      0.9942595958709717,
+      0.9755590558052063,
+      0.9755590558052063,
+      0.9165536761283875,
+      0.9165536761283875
+    ],
+    "eig_recovery": null,
+    "description": "KePIN with spectral stability loss disabled"
+  },
+  {
+    "ablation": "C: w/o Multi-step",
+    "ablation_tag": "C_no_multistep",
+    "dataset": "CMAPSS_FD001",
+    "run_id": 0,
+    "RMSE": 15.818341255187988,
+    "MAE": 11.395275115966797,
+    "R2": 0.8441839403180778,
+    "MonoViol": 1.4744008378885012,
+    "SlopeRMSE": 24.976836488484274,
+    "NASAScore": 700.9770161304649,
+    "epochs_trained": 126,
+    "best_val_loss": 11.157492637634277,
+    "top_eig_mags": [
+      0.9998919367790222,
+      0.9984234571456909,
+      0.9984234571456909,
+      0.991208016872406,
+      0.991208016872406
+    ],
+    "eig_recovery": null,
+    "description": "KePIN without multi-step rollout loss"
+  },
+  {
+    "ablation": "D: w/o Auto-Wt",
+    "ablation_tag": "D_no_autoweight",
+    "dataset": "CMAPSS_FD001",
+    "run_id": 0,
+    "RMSE": 16.133960723876953,
+    "MAE": 11.977895736694336,
+    "R2": 0.8379039787786021,
+    "MonoViol": 0.7831159801862173,
+    "SlopeRMSE": 21.00524177898502,
+    "NASAScore": 562.7690193500288,
+    "epochs_trained": 58,
+    "best_val_loss": 142.59783935546875,
+    "top_eig_mags": [
+      1.0013624429702759,
+      1.0013624429702759,
+      0.9787341952323914,
+      0.9787341952323914,
+      0.758296012878418
+    ],
+    "eig_recovery": null,
+    "description": "KePIN with fixed weights (no Kendall uncertainty)"
+  },
+  {
+    "ablation": "E: KePIN Full",
+    "ablation_tag": "E_kepin_full",
+    "dataset": "CMAPSS_FD001",
+    "run_id": 0,
+    "RMSE": 17.018564224243164,
+    "MAE": 11.959132194519043,
+    "R2": 0.8196416758233553,
+    "MonoViol": 0.8408710054012474,
+    "SlopeRMSE": 23.506714463684787,
+    "NASAScore": 778.4838189450043,
+    "epochs_trained": 129,
+    "best_val_loss": 9.51887035369873,
+    "top_eig_mags": [
+      0.9913730025291443,
+      0.9913730025291443,
+      0.9909976124763489,
+      0.9909976124763489,
+      0.9653063416481018
+    ],
+    "eig_recovery": null,
+    "description": "Full KePIN with all components (proposed method)"
+  }
+]

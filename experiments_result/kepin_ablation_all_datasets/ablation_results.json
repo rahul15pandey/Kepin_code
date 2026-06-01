@@ -1,0 +1,53 @@
+[
+  {
+    "ablation": "A: Baseline FCN",
+    "ablation_tag": "A_baseline_fcn",
+    "dataset": "Building_Energy",
+    "run_id": 0,
+    "RMSE": 0.13389305770397186,
+    "MAE": 0.084779292345047,
+    "R2": 0.8986293706404129,
+    "MonoViol": 0.010268643439450557,
+    "SlopeRMSE": 0.20864205528884883,
+    "NASAScore": 390.9043083278263,
+    "epochs_trained": 100,
+    "best_val_loss": 0.008847469607224831,
+    "top_eig_mags": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "eig_recovery": null,
+    "description": "Vanilla Conv1D + SE + dual pooling, MSE loss only"
+  },
+  {
+    "ablation": "B: w/o Spectral",
+    "ablation_tag": "B_no_spectral",
+    "dataset": "Building_Energy",
+    "run_id": 0,
+    "error": "Exception encountered when calling LSTM.call().\n\n\u001b[1m{{function_node __wrapped__CudnnRNNV3_device_/job:localhost/replica:0/task:0/device:GPU:0}} Failed to call DoRnnForward with model config: [rnn_mode, rnn_input_mode, rnn_direction_mode]: 2, 0, 0 , [num_layers, input_size, num_units, dir_count, max_seq_length, batch_size, cell_num_units]: [1, 128, 64, 1, 48, 50712, 64] \n\t [[{{node CudnnRNNV3}}]] [Op:CudnnRNNV3]\u001b[0m\n\nArguments received by LSTM.call():\n  \u2022 sequences=tf.Tensor(shape=(50712, 48, 128), dtype=float32)\n  \u2022 initial_state=None\n  \u2022 mask=None\n  \u2022 training=False"
+  },
+  {
+    "ablation": "C: w/o Multi-step",
+    "ablation_tag": "C_no_multistep",
+    "dataset": "Building_Energy",
+    "run_id": 0,
+    "error": "Exception encountered when calling LSTM.call().\n\n\u001b[1m{{function_node __wrapped__CudnnRNNV3_device_/job:localhost/replica:0/task:0/device:GPU:0}} Failed to call DoRnnForward with model config: [rnn_mode, rnn_input_mode, rnn_direction_mode]: 2, 0, 0 , [num_layers, input_size, num_units, dir_count, max_seq_length, batch_size, cell_num_units]: [1, 128, 64, 1, 48, 50712, 64] \n\t [[{{node CudnnRNNV3}}]] [Op:CudnnRNNV3]\u001b[0m\n\nArguments received by LSTM.call():\n  \u2022 sequences=tf.Tensor(shape=(50712, 48, 128), dtype=float32)\n  \u2022 initial_state=None\n  \u2022 mask=None\n  \u2022 training=False"
+  },
+  {
+    "ablation": "D: w/o Auto-Wt",
+    "ablation_tag": "D_no_autoweight",
+    "dataset": "Building_Energy",
+    "run_id": 0,
+    "error": "Exception encountered when calling LSTM.call().\n\n\u001b[1m{{function_node __wrapped__CudnnRNNV3_device_/job:localhost/replica:0/task:0/device:GPU:0}} Failed to call DoRnnForward with model config: [rnn_mode, rnn_input_mode, rnn_direction_mode]: 2, 0, 0 , [num_layers, input_size, num_units, dir_count, max_seq_length, batch_size, cell_num_units]: [1, 128, 64, 1, 48, 50712, 64] \n\t [[{{node CudnnRNNV3}}]] [Op:CudnnRNNV3]\u001b[0m\n\nArguments received by LSTM.call():\n  \u2022 sequences=tf.Tensor(shape=(50712, 48, 128), dtype=float32)\n  \u2022 initial_state=None\n  \u2022 mask=None\n  \u2022 training=False"
+  },
+  {
+    "ablation": "E: KePIN Full",
+    "ablation_tag": "E_kepin_full",
+    "dataset": "Building_Energy",
+    "run_id": 0,
+    "error": "Exception encountered when calling LSTM.call().\n\n\u001b[1m{{function_node __wrapped__CudnnRNNV3_device_/job:localhost/replica:0/task:0/device:GPU:0}} Failed to call DoRnnForward with model config: [rnn_mode, rnn_input_mode, rnn_direction_mode]: 2, 0, 0 , [num_layers, input_size, num_units, dir_count, max_seq_length, batch_size, cell_num_units]: [1, 128, 64, 1, 48, 50712, 64] \n\t [[{{node CudnnRNNV3}}]] [Op:CudnnRNNV3]\u001b[0m\n\nArguments received by LSTM.call():\n  \u2022 sequences=tf.Tensor(shape=(50712, 48, 128), dtype=float32)\n  \u2022 initial_state=None\n  \u2022 mask=None\n  \u2022 training=False"
+  }
+]

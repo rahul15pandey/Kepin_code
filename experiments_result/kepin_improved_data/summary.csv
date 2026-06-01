@@ -1,0 +1,3 @@
+Dataset,RMSE,MAE,R²,Tier,Params,Epochs,Time(s)
+Cylinder_Wake,0.0051,0.0041,0.8999,small,"503,785",120,1145
+Building_Energy,0.0808,0.0509,0.9631,small,"503,913",80,1518

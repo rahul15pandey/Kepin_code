@@ -1,0 +1,26 @@
+config,config_tag,category,model_type,dataset,run_id,RMSE,MAE,R2,MAPE,MonoViol,SlopeRMSE,Score,epochs_trained,best_val_loss,n_params,description,error
+MLP,B1_mlp,baseline,mlp,CMAPSS_FD001,0,13.429301261901855,10.511138916015625,0.8876954976920086,17.4352765083313,0.9724465262053418,20.724603766862284,257.5045723167468,155.0,84.75146484375,135432.0,Flatten → Dense (no temporal modelling),
+LSTM,B2_lstm,baseline,lstm,CMAPSS_FD001,0,13.28593635559082,10.019059181213379,0.8900805259930115,18.060007691383362,0.9749355737850838,20.91789504792722,271.88321289298824,92.0,82.0274429321289,127361.0,Stacked LSTM → Dense,
+BiLSTM,B3_bilstm,baseline,bilstm,CMAPSS_FD001,0,14.043645858764648,10.489030838012695,0.877185369841512,18.352237343788147,1.282403479397096,21.14905045078971,312.78438747290863,80.0,87.63176727294922,320129.0,Bidirectional LSTM → Dense,
+CNN-LSTM,B4_cnn_lstm,baseline,cnn_lstm,CMAPSS_FD001,0,15.598281860351562,10.772141456604004,0.8484891001757131,17.346519231796265,0.44807773156275355,21.906173222189725,1000460.814721053,130.0,100.79297637939453,102273.0,Conv1D → LSTM → Dense,
+Vanilla FCN,B5_vanilla_fcn,baseline,vanilla_fcn,CMAPSS_FD001,0,14.960823059082031,11.316313743591309,0.8606197381068701,18.267734348773956,1.141756523726311,21.39901083762509,350.72767513067134,128.0,101.13697814941406,247297.0,"Conv1D + BN + GAP (no SE, no dual-pool)",
+PI-DP-FCN,B6_pi_dp_fcn,baseline,pi_dp_fcn,CMAPSS_FD001,0,,,,,,,,,,,,"in user code:
+
+    File ""/workspace/rahul/KPDD/code/kepin_training.py"", line 188, in train_step  *
+        rul_pred, koopman_out = self.model(X_batch, training=True)
+    File ""/workspace/rahul/miniconda3/envs/kepin/lib/python3.10/site-packages/keras/src/utils/traceback_utils.py"", line 122, in error_handler  **
+        raise e.with_traceback(filtered_tb) from None
+    File ""/workspace/rahul/KPDD/code/kepin_baseline_models.py"", line 403, in call
+        x = self._se_block(x)
+    File ""/workspace/rahul/KPDD/code/kepin_baseline_models.py"", line 392, in _se_block
+        se = keras.layers.Dense(max(filters // ratio, 4), activation='relu')(se)
+
+    ValueError: Exception encountered when calling PIDPFCNBaseline.call().
+    
+    [1mtf.function only supports singleton tf.Variables created on the first call. Make sure the tf.Variable is only created once or created outside tf.function. See https://www.tensorflow.org/guide/function#creating_tfvariables for more information.[0m
+    
+    Arguments received by PIDPFCNBaseline.call():
+      • inputs=tf.Tensor(shape=(4096, 30, 15), dtype=float16)
+      • training=True
+"
+Transformer,B7_transformer,baseline,transformer,CMAPSS_FD001,0,16.93059730529785,13.075008392333984,0.8215013601002807,22.72505909204483,1.6143903940639897,23.15587746856463,519.4791593564529,55.0,125.12025451660156,104961.0,Transformer encoder with self-attention,

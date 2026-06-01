@@ -1,0 +1,117 @@
+[
+  {
+    "ablation": "A: Baseline FCN",
+    "ablation_tag": "A_baseline_fcn",
+    "dataset": "CMAPSS_FD004",
+    "run_id": 0,
+    "RMSE": 17.218183517456055,
+    "MAE": 12.780149459838867,
+    "R2": 0.8377821608622463,
+    "MonoViol": 1.3754207681761839,
+    "SlopeRMSE": 24.530859042116184,
+    "NASAScore": 1555.964775497927,
+    "epochs_trained": 200,
+    "best_val_loss": 124.93199157714844,
+    "top_eig_mags": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "eig_recovery": null,
+    "description": "Vanilla Conv1D + SE + dual pooling, MSE loss only"
+  },
+  {
+    "ablation": "B: w/o Spectral",
+    "ablation_tag": "B_no_spectral",
+    "dataset": "CMAPSS_FD004",
+    "run_id": 0,
+    "RMSE": 17.47347068786621,
+    "MAE": 13.056269645690918,
+    "R2": 0.8329362175112963,
+    "MonoViol": 1.7020741587058776,
+    "SlopeRMSE": 26.614183901087664,
+    "NASAScore": 1512.489991217424,
+    "epochs_trained": 158,
+    "best_val_loss": 2.156632661819458,
+    "top_eig_mags": [
+      0.9997915625572205,
+      0.30476292967796326,
+      0.2551687955856323,
+      0.2551687955856323,
+      0.24207423627376556
+    ],
+    "eig_recovery": null,
+    "description": "KePIN with spectral stability loss disabled"
+  },
+  {
+    "ablation": "C: w/o Multi-step",
+    "ablation_tag": "C_no_multistep",
+    "dataset": "CMAPSS_FD004",
+    "run_id": 0,
+    "RMSE": 17.011274337768555,
+    "MAE": 12.355489730834961,
+    "R2": 0.8416574581489826,
+    "MonoViol": 1.080467871797944,
+    "SlopeRMSE": 24.977284785335428,
+    "NASAScore": 1390.1408159208772,
+    "epochs_trained": 170,
+    "best_val_loss": 1.76689612865448,
+    "top_eig_mags": [
+      0.9987622499465942,
+      0.4878111481666565,
+      0.41002047061920166,
+      0.26272255182266235,
+      0.2504419982433319
+    ],
+    "eig_recovery": null,
+    "description": "KePIN without multi-step rollout loss"
+  },
+  {
+    "ablation": "D: w/o Auto-Wt",
+    "ablation_tag": "D_no_autoweight",
+    "dataset": "CMAPSS_FD004",
+    "run_id": 0,
+    "RMSE": 18.9652099609375,
+    "MAE": 13.645889282226562,
+    "R2": 0.8031936012321762,
+    "MonoViol": 1.123845154278374,
+    "SlopeRMSE": 27.11895093713286,
+    "NASAScore": 1842.3596449678719,
+    "epochs_trained": 102,
+    "best_val_loss": 160.32530212402344,
+    "top_eig_mags": [
+      1.0588396787643433,
+      0.9951299428939819,
+      0.9196441769599915,
+      0.8713427186012268,
+      0.6373051404953003
+    ],
+    "eig_recovery": null,
+    "description": "KePIN with fixed weights (no Kendall uncertainty)"
+  },
+  {
+    "ablation": "E: KePIN Full",
+    "ablation_tag": "E_kepin_full",
+    "dataset": "CMAPSS_FD004",
+    "run_id": 0,
+    "RMSE": 16.829486846923828,
+    "MAE": 11.852261543273926,
+    "R2": 0.8450235333060709,
+    "MonoViol": 1.5971812120766222,
+    "SlopeRMSE": 25.577322764448468,
+    "NASAScore": 1698.6143678257097,
+    "epochs_trained": 172,
+    "best_val_loss": 1.997147798538208,
+    "top_eig_mags": [
+      1.0001773834228516,
+      0.31427422165870667,
+      0.23910307884216309,
+      0.23910307884216309,
+      0.22425198554992676
+    ],
+    "eig_recovery": null,
+    "description": "Full KePIN with all components (proposed method)"
+  }
+]

@@ -1,0 +1,49 @@
+[
+    {
+        "type": "weather",
+        "name": "Jena_Climate",
+        "sequence_length": 72,
+        "rul_cap": null,
+        "csv_path": "datasets/jena_climate_2009_2016.csv",
+        "datetime_col": "Date Time",
+        "target_col": "T (degC)",
+        "feature_cols": ["p (mbar)", "T (degC)", "Tpot (K)", "Tdew (degC)",
+                         "rh (%)", "VPmax (mbar)", "VPact (mbar)", "VPdef (mbar)",
+                         "sh (g/kg)", "H2OC (mmol/mol)", "rho (g/m**3)",
+                         "wv (m/s)", "max. wv (m/s)", "wd (deg)"],
+        "resample_minutes": 60,
+        "prediction_horizon": 24,
+        "train_ratio": 0.8,
+        "test_last_only": false,
+        "comment": "Jena Climate 2009-2016 (Max Planck Institute). 14 atmospheric features, hourly. Predict temperature 24h ahead."
+    },
+    {
+        "type": "finance",
+        "name": "SPY_Stock",
+        "sequence_length": 30,
+        "rul_cap": null,
+        "csv_path": "datasets/spy_stock.csv",
+        "datetime_col": "Date",
+        "close_col": "Close",
+        "prediction_horizon": 5,
+        "drawdown_threshold": 0.05,
+        "target_mode": "drawdown",
+        "train_ratio": 0.8,
+        "test_last_only": false,
+        "comment": "S&P 500 ETF (SPY) 2014-2024 from Yahoo Finance. Auto-generated technical indicators. Time-to-drawdown target."
+    },
+    {
+        "type": "synthetic_ode",
+        "name": "Synthetic_ODE",
+        "sequence_length": 30,
+        "rul_cap": 200,
+        "n_units_train": 100,
+        "n_units_test": 25,
+        "max_life": 300,
+        "dt": 0.1,
+        "noise_std": 0.05,
+        "failure_threshold": 2.0,
+        "test_last_only": false,
+        "comment": "Known linear ODE system for Koopman eigenvalue recovery validation. 5 features (2 states + 3 nonlinear observables)."
+    }
+]

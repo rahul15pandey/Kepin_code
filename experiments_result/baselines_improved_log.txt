@@ -1,0 +1,34 @@
+
+============================================================
+  Baselines on: Cylinder_Wake
+============================================================
+  Data: train=(91320, 40, 8), test=(22830, 40, 8)
+  MLP            : RMSE=0.0062  MAE=0.0049  R²=0.8498  Params=123,393  Time=86s
+  LSTM           : RMSE=0.0051  MAE=0.0041  R²=0.8990  Params=211,073  Time=210s
+  BiLSTM         : RMSE=0.0051  MAE=0.0041  R²=0.8990  Params=553,089  Time=215s
+  CNN-LSTM       : RMSE=0.0052  MAE=0.0041  R²=0.8955  Params=79,489  Time=126s
+  Transformer    : RMSE=0.0051  MAE=0.0041  R²=0.8994  Params=412,033  Time=252s
+  Vanilla FCN    : RMSE=0.0051  MAE=0.0041  R²=0.8978  Params=102,977  Time=141s
+
+============================================================
+  Baselines on: Building_Energy
+============================================================
+  Data: train=(202848, 48, 10), test=(50712, 48, 10)
+  MLP            : RMSE=0.1035  MAE=0.0759  R²=0.9394  Params=164,353  Time=504s
+  LSTM           : RMSE=0.0832  MAE=0.0514  R²=0.9609  Params=212,097  Time=559s
+  BiLSTM         : RMSE=0.0796  MAE=0.0524  R²=0.9642  Params=555,137  Time=556s
+  CNN-LSTM       : RMSE=0.0874  MAE=0.0565  R²=0.9568  Params=80,129  Time=420s
+  Transformer    : RMSE=0.0837  MAE=0.0517  R²=0.9604  Params=413,313  Time=1205s
+  Vanilla FCN    : RMSE=0.0796  MAE=0.0504  R²=0.9641  Params=103,873  Time=504s
+
+Baselines saved to: ../experiments_result/baselines_improved
+
+RMSE Comparison:
+dataset      Building_Energy  Cylinder_Wake
+model                                      
+BiLSTM              0.079556       0.005108
+CNN-LSTM            0.087378       0.005196
+LSTM                0.083187       0.005108
+MLP                 0.103541       0.006228
+Transformer         0.083663       0.005098
+Vanilla FCN         0.079634       0.005137

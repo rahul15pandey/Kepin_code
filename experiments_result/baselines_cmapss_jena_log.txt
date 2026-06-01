@@ -1,0 +1,67 @@
+
+============================================================
+  Baselines on: CMAPSS_FD001
+============================================================
+  Data: train=(17731, 30, 15), test=(100, 30, 15)
+  MLP            : RMSE=13.3101  MAE=10.2195  R²=0.8897  Params=156,673  Time=22s
+  LSTM           : RMSE=13.5553  MAE=9.4546  R²=0.8856  Params=214,657  Time=24s
+  BiLSTM         : RMSE=13.0154  MAE=9.3883  R²=0.8945  Params=560,257  Time=29s
+  CNN-LSTM       : RMSE=14.2701  MAE=9.6905  R²=0.8732  Params=81,729  Time=25s
+  Transformer    : RMSE=16.5678  MAE=12.3076  R²=0.8291  Params=411,649  Time=64s
+  Vanilla FCN    : RMSE=15.9666  MAE=12.1908  R²=0.8412  Params=106,113  Time=24s
+
+============================================================
+  Baselines on: CMAPSS_FD002
+============================================================
+  Data: train=(46219, 30, 24), test=(253, 30, 24)
+  MLP            : RMSE=17.9005  MAE=14.7213  R²=0.8248  Params=225,793  Time=119s
+  LSTM           : RMSE=15.8905  MAE=11.6900  R²=0.8619  Params=219,265  Time=57s
+  BiLSTM         : RMSE=15.2980  MAE=11.5596  R²=0.8720  Params=569,473  Time=69s
+  CNN-LSTM       : RMSE=21.1746  MAE=14.9243  R²=0.7548  Params=84,609  Time=55s
+  Transformer    : RMSE=14.6850  MAE=10.4998  R²=0.8821  Params=412,801  Time=129s
+  Vanilla FCN    : RMSE=21.0016  MAE=15.6544  R²=0.7588  Params=110,145  Time=152s
+
+============================================================
+  Baselines on: CMAPSS_FD003
+============================================================
+  Data: train=(21820, 30, 16), test=(100, 30, 16)
+  MLP            : RMSE=12.6352  MAE=8.9539  R²=0.8959  Params=164,353  Time=36s
+  LSTM           : RMSE=11.8649  MAE=8.6517  R²=0.9082  Params=215,169  Time=33s
+  BiLSTM         : RMSE=12.0756  MAE=8.6647  R²=0.9049  Params=561,281  Time=45s
+  CNN-LSTM       : RMSE=13.4240  MAE=10.0620  R²=0.8825  Params=82,049  Time=33s
+  Transformer    : RMSE=14.0987  MAE=9.9847  R²=0.8704  Params=411,777  Time=60s
+  Vanilla FCN    : RMSE=14.6097  MAE=10.8110  R²=0.8609  Params=106,561  Time=34s
+
+============================================================
+  Baselines on: CMAPSS_FD004
+============================================================
+  Data: train=(54028, 30, 24), test=(237, 30, 24)
+  MLP            : RMSE=21.8221  MAE=17.3919  R²=0.7394  Params=225,793  Time=140s
+  LSTM           : RMSE=19.0742  MAE=13.7983  R²=0.8009  Params=219,265  Time=68s
+  BiLSTM         : RMSE=20.1747  MAE=13.6280  R²=0.7773  Params=569,473  Time=84s
+  CNN-LSTM       : RMSE=23.6323  MAE=17.4159  R²=0.6944  Params=84,609  Time=61s
+  Transformer    : RMSE=17.0162  MAE=12.2386  R²=0.8416  Params=412,801  Time=203s
+  Vanilla FCN    : RMSE=23.9241  MAE=17.7765  R²=0.6868  Params=110,145  Time=169s
+
+============================================================
+  Baselines on: Jena_Climate
+============================================================
+  Data: train=(22072, 48, 14), test=(5483, 48, 14)
+  MLP            : RMSE=6.0316  MAE=4.8087  R²=0.4425  Params=213,505  Time=51s
+  LSTM           : RMSE=5.8240  MAE=4.6853  R²=0.4802  Params=214,145  Time=31s
+  BiLSTM         : RMSE=5.8239  MAE=4.7003  R²=0.4802  Params=559,233  Time=39s
+  CNN-LSTM       : RMSE=5.9489  MAE=4.7809  R²=0.4577  Params=81,409  Time=34s
+  Transformer    : RMSE=5.7772  MAE=4.6127  R²=0.4885  Params=413,825  Time=64s
+  Vanilla FCN    : RMSE=5.9680  MAE=4.7132  R²=0.4542  Params=105,665  Time=35s
+
+Baselines saved to: ../experiments_result/baselines_cmapss_jena
+
+RMSE Comparison:
+dataset      CMAPSS_FD001  CMAPSS_FD002  CMAPSS_FD003  CMAPSS_FD004  Jena_Climate
+model                                                                            
+BiLSTM          13.015358     15.298006     12.075551     20.174683      5.823853
+CNN-LSTM        14.270131     21.174648     13.424014     23.632338      5.948851
+LSTM            13.555278     15.890485     11.864885     19.074186      5.824006
+MLP             13.310131     17.900509     12.635233     21.822096      6.031643
+Transformer     16.567764     14.684965     14.098660     17.016174      5.777240
+Vanilla FCN     15.966635     21.001637     14.609748     23.924095      5.967980

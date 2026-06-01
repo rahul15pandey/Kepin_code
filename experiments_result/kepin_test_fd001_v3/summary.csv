@@ -1,0 +1,2 @@
+Dataset,RMSE,MAE,R²,Tier,Params,Epochs,Time(s)
+CMAPSS_FD001,19.3160,14.1853,0.7677,small,"504,233",69,211

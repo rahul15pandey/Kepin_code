@@ -1,0 +1,64 @@
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.15 and num_layers=1
+  warnings.warn(
+
+=================================================================
+  KePIN Training: Cylinder_Wake
+=================================================================
+  Data: train=(91320, 40, 8), test=(22830, 40, 8)
+  Target range: [-0.09, 0.10]
+  Model: KePIN(small) | params=503,785 | latent=64 | blocks=3 | heads=4
+  E   1/200 | lr=0.000200 | train=0.1729 val=-0.1341 rmse=0.01 | w=[1.00,1.09,1.09,1.11] | |λ|=[0.49856424 0.49856424 0.49800077]
+  E  14/200 | lr=0.000964 | train=-5.9958 val=-5.9993 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.47936848 0.47936848 0.47910517]
+  E  27/200 | lr=0.000771 | train=-5.9995 val=-5.9964 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.44806206 0.44806206 0.44510368]
+  E  40/200 | lr=0.000477 | train=-5.9996 val=-5.9971 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.42182177 0.4194143  0.4194143 ]
+  E  53/200 | lr=0.000192 | train=-5.9996 val=-5.9996 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.4107669  0.40645072 0.40012696]
+  E  66/200 | lr=0.000021 | train=-5.9996 val=-5.9996 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.40906638 0.38096765 0.38096765]
+  E  79/200 | lr=0.000973 | train=-5.9996 val=-5.9995 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.3899142  0.33312464 0.32875052]
+  E  92/200 | lr=0.000790 | train=-5.9996 val=-5.9991 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.37563917 0.3081305  0.22325096]
+  E 105/200 | lr=0.000501 | train=-5.9996 val=-5.9995 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.36394584 0.2945712  0.20190383]
+  E 118/200 | lr=0.000211 | train=-5.9996 val=-5.9996 rmse=0.01 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.3633525  0.2864169  0.23674005]
+  Early stopping at epoch 120
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.15 and num_layers=1
+  warnings.warn(
+
+  Final Results for Cylinder_Wake:
+    RMSE:  0.0051
+    MAE:   0.0041
+    R²:    0.8999
+    Time:  1144.5s (120 epochs)
+    Top |λ|: [0.40898833 0.3854459  0.3854459  0.3756148  0.3756148 ]
+    Loss weights: pred=1.000 koop=2.000 spec=2.000 multi=2.000
+
+=================================================================
+  KePIN Training: Building_Energy
+=================================================================
+  Data: train=(202848, 48, 10), test=(50712, 48, 10)
+  Target range: [0.00, 1.98]
+  Model: KePIN(small) | params=503,913 | latent=64 | blocks=3 | heads=4
+  E   1/200 | lr=0.000200 | train=-0.0484 val=-0.2669 rmse=0.12 | w=[1.00,1.20,1.18,1.21] | |λ|=[0.4968162  0.4968162  0.49593532]
+  E  14/200 | lr=0.000964 | train=-5.9985 val=-5.9983 rmse=0.09 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.40103045 0.40103045 0.3960148 ]
+  E  27/200 | lr=0.000771 | train=-5.9988 val=-5.9990 rmse=0.08 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.28387186 0.27697682 0.25430116]
+  E  40/200 | lr=0.000477 | train=-5.9990 val=-5.9991 rmse=0.09 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.23493484 0.21418236 0.18259571]
+  E  53/200 | lr=0.000192 | train=-5.9993 val=-5.9991 rmse=0.09 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.18686071 0.18686071 0.17133503]
+  E  66/200 | lr=0.000021 | train=-5.9994 val=-5.9991 rmse=0.09 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.17147326 0.17100522 0.17100522]
+  E  79/200 | lr=0.000973 | train=-5.9991 val=-5.9990 rmse=0.09 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.12267226 0.10917071 0.08534983]
+  Early stopping at epoch 80
+/workspace/rahul/KPDD/code/kepin_torch_training.py:494: UserWarning: Data has no positive values, and therefore cannot be log-scaled.
+  axes[0, 0].set_yscale('log')
+
+  Final Results for Building_Energy:
+    RMSE:  0.0808
+    MAE:   0.0509
+    R²:    0.9631
+    Time:  1517.7s (80 epochs)
+    Top |λ|: [0.27325207 0.25977537 0.2537201  0.2369012  0.2369012 ]
+    Loss weights: pred=1.000 koop=2.000 spec=2.000 multi=2.000
+
+======================================================================
+  ALL EXPERIMENTS SUMMARY
+======================================================================
+        Dataset   RMSE    MAE     R²  Tier  Params  Epochs Time(s)
+  Cylinder_Wake 0.0051 0.0041 0.8999 small 503,785     120    1145
+Building_Energy 0.0808 0.0509 0.9631 small 503,913      80    1518
+
+Results saved to: ../experiments_result/kepin_improved_data

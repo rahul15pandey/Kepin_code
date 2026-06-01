@@ -1,0 +1,13 @@
+# Core scientific stack
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.11.4
+scikit-learn==1.4.2
+matplotlib==3.8.4
+
+# TensorFlow/Keras (primary implementation)
+tensorflow==2.16.1
+keras==3.3.3
+
+# Optional: PyTorch baselines and Torch-based KePIN
+# torch==2.3.1

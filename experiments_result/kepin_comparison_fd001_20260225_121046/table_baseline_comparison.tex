@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{Comparison of KePIN with baseline methods across 6 domains. Best values per dataset are \textbf{bolded}.}
+\label{tab:baseline_comparison}
+\begin{tabular}{l|ccc|ccc|ccc|ccc|ccc|ccc}
+\toprule
+\multirow{2}{*}{Dataset} & \multicolumn{3}{c}{MLP} & \multicolumn{3}{c}{LSTM} & \multicolumn{3}{c}{BiLSTM} & \multicolumn{3}{c}{CNN-LSTM} & \multicolumn{3}{c}{Vanilla FCN} & \multicolumn{3}{c}{Transformer} \\
+ & RMSE & MAE & R2 & RMSE & MAE & R2 & RMSE & MAE & R2 & RMSE & MAE & R2 & RMSE & MAE & R2 & RMSE & MAE & R2 \\
+\midrule
+FD001 & 13.43 & 10.51 & 0.888 & \textbf{13.29} & \textbf{10.02} & \textbf{0.890} & 14.04 & 10.49 & 0.877 & 15.60 & 10.77 & 0.848 & 14.96 & 11.32 & 0.861 & 16.93 & 13.08 & 0.822 \\
+\midrule
+\textit{Average} & 13.43 & 10.51 & 0.888 & 13.29 & 10.02 & 0.890 & 14.04 & 10.49 & 0.877 & 15.60 & 10.77 & 0.848 & 14.96 & 11.32 & 0.861 & 16.93 & 13.08 & 0.822 \\
+\bottomrule
+\end{tabular}
+\end{table*}

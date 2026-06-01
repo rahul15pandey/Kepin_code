@@ -1,0 +1,160 @@
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+=================================================================
+  KePIN Training: CMAPSS_FD001
+=================================================================
+  Data: train=(17731, 30, 15), test=(100, 30, 15)
+  Target range: [0.00, 125.00]
+  Model: KePIN(medium) | params=1,398,089 | latent=128 | blocks=4 | heads=4
+  E   1/200 | lr=0.000160 | train=489.2731 val=115.7245 rmse=24.54 | w=[0.98,1.02,1.02,1.03] | |λ|=[0.49428046 0.49428046 0.49401623]
+  E  14/200 | lr=0.000771 | train=2.3198 val=60.4151 rmse=19.83 | w=[0.79,4.04,4.50,4.30] | |λ|=[0.79534775 0.69886804 0.58175844]
+  E  27/200 | lr=0.000616 | train=-3.1356 val=52.9657 rmse=21.40 | w=[0.64,16.97,16.49,17.18] | |λ|=[0.93604237 0.86360955 0.86360955]
+  E  40/200 | lr=0.000381 | train=-4.5543 val=63.6408 rmse=23.08 | w=[0.71,33.72,32.56,34.71] | |λ|=[0.9525791 0.9041337 0.8538817]
+  E  53/200 | lr=0.000154 | train=-3.6204 val=78.6213 rmse=22.95 | w=[0.92,47.43,45.96,49.10] | |λ|=[0.95808405 0.91029155 0.8392821 ]
+  E  66/200 | lr=0.000017 | train=-5.8211 val=94.3961 rmse=24.03 | w=[1.01,52.20,50.58,54.06] | |λ|=[0.9604173  0.9332634  0.82954365]
+  Early stopping at epoch 74
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+  Final Results for CMAPSS_FD001:
+    RMSE:  21.4104
+    MAE:   15.2955
+    R²:    0.7145
+    Time:  366.2s (74 epochs)
+    Top |λ|: [0.93790376 0.86719483 0.86719483 0.60904586 0.60904586]
+    Loss weights: pred=0.636 koop=19.421 spec=18.760 multi=19.722
+
+=================================================================
+  KePIN Training: CMAPSS_FD002
+=================================================================
+  Data: train=(46219, 30, 24), test=(253, 30, 24)
+  Target range: [0.00, 125.00]
+  Model: KePIN(large) | params=1,739,545 | latent=128 | blocks=4 | heads=8
+  E   1/180 | lr=0.000120 | train=488.5530 val=115.7885 rmse=24.69 | w=[0.98,0.99,1.02,1.02] | |λ|=[0.49266776 0.49266776 0.4925217 ]
+  E  13/180 | lr=0.000580 | train=3.2020 val=95.8687 rmse=24.83 | w=[0.86,2.06,4.77,1.54] | |λ|=[0.85039383 0.7663237  0.6483355 ]
+  E  25/180 | lr=0.000464 | train=-1.8211 val=68.0702 rmse=23.98 | w=[0.70,9.54,18.01,8.08] | |λ|=[0.95762604 0.9428907  0.9428907 ]
+  E  37/180 | lr=0.000285 | train=-4.2325 val=73.1156 rmse=21.91 | w=[0.86,19.51,43.59,21.20] | |λ|=[0.97254807 0.96920943 0.96920943]
+  E  49/180 | lr=0.000112 | train=-5.2482 val=99.7879 rmse=21.98 | w=[1.18,26.26,63.28,30.43] | |λ|=[0.97641855 0.9744186  0.9744186 ]
+  E  61/180 | lr=0.000011 | train=-5.5776 val=116.2826 rmse=22.41 | w=[1.32,29.15,70.31,33.88] | |λ|=[0.9779061 0.9755891 0.9755891]
+  Early stopping at epoch 69
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+  Final Results for CMAPSS_FD002:
+    RMSE:  21.9504
+    MAE:   15.7041
+    R²:    0.7365
+    Time:  460.8s (69 epochs)
+    Top |λ|: [0.964918  0.9585988 0.9585988 0.944893  0.8162305]
+    Loss weights: pred=0.698 koop=12.267 spec=26.178 multi=12.004
+
+=================================================================
+  KePIN Training: CMAPSS_FD003
+=================================================================
+  Data: train=(21820, 30, 16), test=(100, 30, 16)
+  Target range: [0.00, 125.00]
+  Model: KePIN(medium) | params=1,398,153 | latent=128 | blocks=4 | heads=4
+  E   1/200 | lr=0.000160 | train=517.8374 val=99.8139 rmse=22.52 | w=[0.98,1.03,1.03,1.03] | |λ|=[0.494577   0.494577   0.49405724]
+  E  14/200 | lr=0.000771 | train=3.0816 val=33.3591 rmse=15.72 | w=[0.63,5.76,6.78,5.47] | |λ|=[0.8838413 0.8202131 0.6586716]
+  E  27/200 | lr=0.000616 | train=-3.5096 val=13.7335 rmse=14.00 | w=[0.42,34.80,33.97,34.33] | |λ|=[0.9413132 0.9413132 0.8493414]
+  E  40/200 | lr=0.000381 | train=-5.8831 val=13.2380 rmse=14.28 | w=[0.44,95.30,91.44,94.85] | |λ|=[0.97809494 0.9648334  0.8224133 ]
+  E  53/200 | lr=0.000154 | train=-6.9886 val=21.2881 rmse=14.56 | w=[0.62,148.82,142.32,148.20] | |λ|=[0.9818575 0.972541  0.8067638]
+  E  66/200 | lr=0.000017 | train=-7.3592 val=26.0061 rmse=14.90 | w=[0.70,169.07,161.60,168.34] | |λ|=[0.9829372 0.9741725 0.8216844]
+  Early stopping at epoch 75
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+  Final Results for CMAPSS_FD003:
+    RMSE:  13.2074
+    MAE:   9.0775
+    R²:    0.8863
+    Time:  478.5s (75 epochs)
+    Top |λ|: [0.9662168  0.94457704 0.84820956 0.56673175 0.4203221 ]
+    Loss weights: pred=0.389 koop=46.219 spec=44.891 multi=45.951
+
+=================================================================
+  KePIN Training: CMAPSS_FD004
+=================================================================
+  Data: train=(54028, 30, 24), test=(237, 30, 24)
+  Target range: [0.00, 125.00]
+  Model: KePIN(large) | params=1,739,545 | latent=128 | blocks=4 | heads=8
+  E   1/180 | lr=0.000120 | train=570.1482 val=186.5250 rmse=34.37 | w=[0.98,1.02,1.02,1.02] | |λ|=[0.49470493 0.49470493 0.4946065 ]
+  E  13/180 | lr=0.000580 | train=1.7208 val=101.8416 rmse=27.07 | w=[0.81,4.81,5.99,2.70] | |λ|=[0.6910671 0.6910671 0.6157749]
+  E  25/180 | lr=0.000464 | train=-3.0137 val=80.1328 rmse=27.92 | w=[0.64,23.36,22.66,16.01] | |λ|=[0.918437   0.89453423 0.7449187 ]
+  E  37/180 | lr=0.000285 | train=-4.7701 val=81.0619 rmse=27.44 | w=[0.69,47.54,45.60,32.65] | |λ|=[0.95698446 0.9176247  0.77943355]
+  E  49/180 | lr=0.000112 | train=-5.6528 val=110.1333 rmse=29.20 | w=[0.85,64.59,61.90,44.35] | |λ|=[0.96109587 0.9278743  0.76921386]
+  E  61/180 | lr=0.000011 | train=-6.0825 val=116.9901 rmse=28.20 | w=[0.94,71.83,68.85,49.33] | |λ|=[0.9650208 0.9355053 0.7590256]
+  Early stopping at epoch 67
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+  Final Results for CMAPSS_FD004:
+    RMSE:  25.7599
+    MAE:   18.4340
+    R²:    0.6369
+    Time:  556.3s (67 epochs)
+    Top |λ|: [0.9213428 0.9213428 0.7547307 0.7000594 0.6098021]
+    Loss weights: pred=0.627 koop=28.053 spec=27.070 multi=19.258
+
+=================================================================
+  KePIN Training: Jena_Climate
+=================================================================
+  Data: train=(22072, 48, 14), test=(5483, 48, 14)
+  Target range: [-22.65, 37.04]
+  Model: KePIN(medium) | params=1,398,025 | latent=128 | blocks=4 | heads=4
+  E   1/100 | lr=0.000200 | train=28.1255 val=24.7503 rmse=9.89 | w=[0.99,1.00,1.01,1.00] | |λ|=[0.4945467  0.4945467  0.49454263]
+  E   7/100 | lr=0.000998 | train=1.3850 val=8.7484 rmse=6.19 | w=[0.92,1.40,1.35,1.41] | |λ|=[0.5910228  0.55782396 0.55508494]
+  E  13/100 | lr=0.000893 | train=-0.2355 val=6.5870 rmse=5.86 | w=[0.87,2.06,1.92,2.22] | |λ|=[0.6740525 0.6268188 0.6268188]
+  E  19/100 | lr=0.000664 | train=-1.0003 val=7.4305 rmse=6.33 | w=[0.88,2.76,2.52,3.01] | |λ|=[0.7428607 0.6441509 0.6441509]
+  E  25/100 | lr=0.000383 | train=-1.4727 val=7.2282 rmse=6.18 | w=[0.94,3.29,2.98,3.60] | |λ|=[0.7659027  0.68268746 0.63032234]
+  E  31/100 | lr=0.000139 | train=-1.7331 val=7.1680 rmse=6.04 | w=[0.99,3.56,3.22,3.90] | |λ|=[0.77194715 0.69867504 0.65247595]
+  E  37/100 | lr=0.000010 | train=-1.8075 val=7.2577 rmse=6.04 | w=[1.00,3.62,3.28,3.97] | |λ|=[0.77274096 0.70245767 0.6593372 ]
+  E  43/100 | lr=0.000964 | train=-1.6197 val=7.5996 rmse=6.12 | w=[1.03,4.16,3.76,4.56] | |λ|=[0.7671523 0.7671523 0.6593294]
+  Early stopping at epoch 43
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+  Final Results for Jena_Climate:
+    RMSE:  5.8600
+    MAE:   4.6461
+    R²:    0.4738
+    Time:  113.5s (43 epochs)
+    Top |λ|: [0.6740525 0.6268188 0.6268188 0.6078492 0.6078492]
+    Loss weights: pred=0.869 koop=2.062 spec=1.916 multi=2.218
+
+=================================================================
+  KePIN Training: Cylinder_Wake
+=================================================================
+  Data: train=(55320, 40, 8), test=(13830, 40, 8)
+  Target range: [-0.11, 0.10]
+  Model: KePIN(small) | params=503,785 | latent=64 | blocks=3 | heads=4
+  E   1/150 | lr=0.000160 | train=0.3701 val=-0.0434 rmse=0.03 | w=[1.04,1.04,1.04,1.05] | |λ|=[0.49807408 0.49807408 0.4980462 ]
+  E  11/150 | lr=0.000780 | train=-3.0342 val=-3.2075 rmse=0.02 | w=[4.86,5.01,4.85,5.18] | |λ|=[0.48732474 0.48732474 0.48677105]
+  E  21/150 | lr=0.000635 | train=-6.1618 val=-6.2998 rmse=0.02 | w=[22.74,23.59,22.76,24.44] | |λ|=[0.47955084 0.47955084 0.47924593]
+  E  31/150 | lr=0.000401 | train=-8.4158 val=-8.5030 rmse=0.02 | w=[68.38,71.18,68.67,73.75] | |λ|=[0.4635645  0.4635645  0.46215075]
+  E  41/150 | lr=0.000166 | train=-9.6214 val=-9.6565 rmse=0.02 | w=[121.85,127.20,122.70,131.77] | |λ|=[0.46331096 0.46331096 0.45784515]
+  E  51/150 | lr=0.000021 | train=-9.9786 val=-9.9821 rmse=0.02 | w=[143.47,149.84,144.53,155.23] | |λ|=[0.45738804 0.45738804 0.45716062]
+  E  61/150 | lr=0.000780 | train=-11.6289 val=-11.7517 rmse=0.02 | w=[350.65,370.27,358.12,384.29] | |λ|=[0.432655   0.37503833 0.37503833]
+  E  71/150 | lr=0.000635 | train=-11.9639 val=-11.9535 rmse=0.02 | w=[403.43,403.43,403.43,403.43] | |λ|=[0.4277374  0.32970056 0.32970056]
+  E  81/150 | lr=0.000401 | train=-11.9795 val=-11.9414 rmse=0.02 | w=[403.43,403.43,403.43,403.43] | |λ|=[0.4243154  0.30965236 0.30965236]
+  E  91/150 | lr=0.000166 | train=-11.9903 val=-11.9297 rmse=0.03 | w=[403.43,403.43,403.43,403.43] | |λ|=[0.42306197 0.29835308 0.29835308]
+  Early stopping at epoch 100
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.1 and num_layers=1
+  warnings.warn(
+
+  Final Results for Cylinder_Wake:
+    RMSE:  0.0205
+    MAE:   0.0163
+    R²:    0.3347
+    Time:  650.8s (100 epochs)
+    Top |λ|: [0.4300765  0.35326916 0.35156918 0.35156918 0.34830365]
+    Loss weights: pred=403.429 koop=403.429 spec=403.429 multi=403.429
+
+=================================================================
+  KePIN Training: Building_Energy
+=================================================================
+  Data: train=(133728, 48, 10), test=(33432, 48, 10)
+  Target range: [0.00, 2.07]
+  Model: KePIN(small) | params=503,913 | latent=64 | blocks=3 | heads=4
+  E   1/120 | lr=0.000200 | train=0.3465 val=-0.0089 rmse=0.61 | w=[1.06,1.06,1.06,1.08] | |λ|=[0.49941033 0.49941033 0.49853528]

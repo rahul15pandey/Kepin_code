@@ -1,0 +1,54 @@
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.15 and num_layers=1
+  warnings.warn(
+
+=================================================================
+  KePIN Training: Cylinder_Wake
+=================================================================
+  Data: train=(55320, 40, 8), test=(13830, 40, 8)
+  Target range: [-0.11, 0.10]
+  Model: KePIN(small) | params=503,785 | latent=64 | blocks=3 | heads=4
+  E   1/150 | lr=0.000160 | train=0.4232 val=-0.0349 rmse=0.03 | w=[1.00,1.04,1.04,1.05] | |λ|=[0.5006071  0.5006071  0.49935678]
+  E  11/150 | lr=0.000780 | train=-2.3010 val=-2.4296 rmse=0.02 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.4942125  0.49184275 0.49184275]
+  E  21/150 | lr=0.000635 | train=-4.6461 val=-4.7501 rmse=0.02 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.48465085 0.48465085 0.48330688]
+  E  31/150 | lr=0.000401 | train=-5.9954 val=-5.9945 rmse=0.02 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.47880054 0.47880054 0.47835648]
+  E  41/150 | lr=0.000166 | train=-5.9963 val=-5.9942 rmse=0.02 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.47705096 0.47705096 0.47691825]
+  Early stopping at epoch 48
+/workspace/rahul/miniconda3/lib/python3.13/site-packages/torch/nn/modules/rnn.py:123: UserWarning: dropout option adds dropout after all but last recurrent layer, so non-zero dropout expects num_layers greater than 1, but got dropout=0.15 and num_layers=1
+  warnings.warn(
+
+  Final Results for Cylinder_Wake:
+    RMSE:  0.0202
+    MAE:   0.0162
+    R²:    0.3480
+    Time:  268.7s (48 epochs)
+    Top |λ|: [0.4910574  0.4910574  0.49042687 0.49042687 0.49022037]
+    Loss weights: pred=1.000 koop=2.000 spec=2.000 multi=2.000
+
+=================================================================
+  KePIN Training: Building_Energy
+=================================================================
+  Data: train=(133728, 48, 10), test=(33432, 48, 10)
+  Target range: [0.00, 2.07]
+  Model: KePIN(small) | params=503,913 | latent=64 | blocks=3 | heads=4
+  E   1/120 | lr=0.000200 | train=0.2256 val=-0.0628 rmse=0.61 | w=[1.00,1.07,1.06,1.07] | |λ|=[0.49698594 0.49698594 0.4962829 ]
+  E   9/120 | lr=0.000986 | train=-2.6044 val=-2.8009 rmse=0.65 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.4806713  0.47986582 0.47986582]
+  E  17/120 | lr=0.000825 | train=-5.5009 val=-5.6638 rmse=0.66 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.46514717 0.46514717 0.46490413]
+  E  25/120 | lr=0.000540 | train=-5.9775 val=-5.9780 rmse=0.65 | w=[1.00,2.00,2.00,2.00] | |λ|=[0.4593654  0.4593654  0.45918864]
+  Early stopping at epoch 31
+
+  Final Results for Building_Energy:
+    RMSE:  0.6137
+    MAE:   0.4532
+    R²:    0.2397
+    Time:  192.8s (31 epochs)
+    Top |λ|: [0.49698594 0.49698594 0.4962829  0.4962829  0.49561545]
+    Loss weights: pred=1.000 koop=1.068 spec=1.063 multi=1.075
+
+======================================================================
+  ALL EXPERIMENTS SUMMARY
+======================================================================
+        Dataset   RMSE    MAE     R²  Tier  Params  Epochs Time(s)
+  Cylinder_Wake 0.0202 0.0162 0.3480 small 503,785      48     269
+Building_Energy 0.6137 0.4532 0.2397 small 503,913      31     193
+
+Results saved to: ../experiments_result/kepin_new_domains

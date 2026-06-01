@@ -1,0 +1,15 @@
+{
+  "seed": 42,
+  "deterministic": false,
+  "data_root": null,
+  "dataset_config": "configs/datasets_kepin_config.json",
+  "dataset_idx": null,
+  "output_dir": null,
+  "epochs": 200,
+  "batch_size": null,
+  "lr": null,
+  "patience": 40,
+  "n_runs": 1,
+  "enhanced": false,
+  "use_auto_weights": true
+}
